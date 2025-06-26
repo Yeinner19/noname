@@ -1,0 +1,45 @@
+nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.row > div{
+    background: #f2f2f2;
+    margin: 10px 0px;
+    padding: 10px 0;
+}
+
+.list__item{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.link-items{
+    text-decoration: none;
+}
+
+.nav__list{
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.logoPrincipal{
+    width: 50px;
+    height:50px;
+    border-radius: 50px;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden; 
+}
+
+.logoPrincipal:hover{
+    transform: scale(1.09);
+    cursor: pointer;
+}
+
+.montos{
+    text-decoration: none;
+    color: black;
+}
