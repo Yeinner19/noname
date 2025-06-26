@@ -43,3 +43,11 @@ nav{
     text-decoration: none;
     color: black;
 }
+
+.nav-link{
+    color: #000 !important;
+}
+
+.nav-item{
+    margin-left: 10px;
+}

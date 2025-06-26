@@ -2,26 +2,12 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Principal</title>
     <link rel="stylesheet" href="../css/pagina-principal.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <style>
-        .contenedor {
-            margin-bottom: 20px;
-            background: #0d6efd;
-            color: #fff;
-        }
-
-        .contenedor>div {
-            background: rgba(255, 255, 255, .2);
-            padding: 15px;
-            border: 1px solid #0d6efd;
-        }
-    </style>
 </head>
 
 <body>
@@ -30,22 +16,41 @@
         <div class="row"> <!--Barra de Navegación-->
             <div class="col">
                 <header>
-                    <nav>
+                    <nav class="d-flex justify-content-between align-items-center">
                         <img class="logoPrincipal" src="../img/logo-principal.png" alt="logoNoname">
-                        <ul class="nav__list">
-                            <li class="list__item"><a class="link-items" href="">Inicio</a></li>
-                            <li class="list__item"><a class="link-items" href="">Productos</a></li>
-                            <li class="list__item"><a class="link-items" href="">Contactanos</a></li>
-                            <li class="list__item"><a class="link-items" href="">Acerca de</a></li>
+                        <ul class="nav nav-underline">
+                            <li class="nav-item">
+                                <a class="nav-link inicio" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Categorías</a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-underline ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Crea tu cuenta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Ingresa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Mis compras</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">🛒</a>
+                            </li>
+                            <li class="nav-item me-5">
+                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            </li>
                         </ul>
                     </nav>
                 </header>
             </div>
         </div>
 
-        <div class="container my-5">
+        <div class="container my-5"> <!--Contenedor de los productos-->
             <h2 class="text-center mb-4">Nuestros Productos</h2>
-            <div class="row row-cols-2   row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4 g-4" id="contenedor-productos">
                 <div class="col">
                     <div class="card h-100 shadow-sm">
                         <img src="https://bylmo.com/cdn/shop/files/1010433-escritorio-gamer-lax-1502x88cm-wengue-azul-moderno_6.png?v=1712942885&width=1214"
@@ -62,7 +67,8 @@
 
                 <div class="col">
                     <div class="card h-100 shadow-sm">
-                        <img src="https://panamericana.vtexassets.com/arquivos/ids/493023/audifonos-negros-inalambricos-tipo-diadema-sony-wh-ch520-2-27242925205.jpg?v=638187164064900000" class="card-img-top" alt="Nombre del Producto 2">
+                        <img src="https://panamericana.vtexassets.com/arquivos/ids/493023/audifonos-negros-inalambricos-tipo-diadema-sony-wh-ch520-2-27242925205.jpg?v=638187164064900000"
+                            class="card-img-top" alt="Nombre del Producto 2">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Novedad</h5>
                             <p class="card-text text-muted">Aquí una descripción más detallada sobre lo que ofrece este
@@ -75,7 +81,8 @@
 
                 <div class="col">
                     <div class="card h-100 shadow-sm">
-                        <img src="https://tugocolombia.vtexassets.com/arquivos/ids/313528/8893283-1.jpg?v=638815568270570000" class="card-img-top" alt="Nombre del Producto 3">
+                        <img src="https://tugocolombia.vtexassets.com/arquivos/ids/313528/8893283-1.jpg?v=638815568270570000"
+                            class="card-img-top" alt="Nombre del Producto 3">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Oferta Especial</h5>
                             <p class="card-text text-muted">No te pierdas esta oferta por tiempo limitado, ¡aprovecha
@@ -88,7 +95,8 @@
 
                 <div class="col">
                     <div class="card h-100 shadow-sm">
-                        <img src="https://luegopago.blob.core.windows.net/content-process/products-images/prod/1302/8167b795-8914-4dd7-9593-6bba1f1ff837.webp" class="card-img-top" alt="Nombre del Producto 4">
+                        <img src="https://luegopago.blob.core.windows.net/content-process/products-images/prod/1302/8167b795-8914-4dd7-9593-6bba1f1ff837.webp"
+                            class="card-img-top" alt="Nombre del Producto 4">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Lo Más Vendido</h5>
                             <p class="card-text text-muted">Uno de nuestros productos más populares, ¡descubre por qué!
@@ -98,17 +106,6 @@
                         </div>
                     </div>
                 </div>
-
-            </div>
-        </div>
-
-
-        
-        <!--Productos-->
-
-        <div class="container my-5">
-            <h2 class="text-center">Nuestros Productos</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
 
                 <div class="col">
                     <div class="card h-100">
@@ -158,7 +155,6 @@
             </div>
         </div>
     </div>
-
 
     <script src="../js/app.js"></script>
 
