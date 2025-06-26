@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Escritorio para gaming",
+        "descripción": "Escritorio hecho ideal para gamers con mucho espacio",
+        "precio": "599999",
+        "imagen": "https://bylmo.com/cdn/shop/files/1010433-escritorio-gamer-lax-1502x88cm-wengue-azul-moderno_6.png?v=1712942885&width=1214"
+    },
+    {
+        "nombre": "Auriculares de Diadema",
+        "descripción": "Los mejores auriculares que encontrarás",
+        "precio": "189000",
+        "imagen": "https://panamericana.vtexassets.com/arquivos/ids/493023/audifonos-negros-inalambricos-tipo-diadema-sony-wh-ch520-2-27242925205.jpg?v=638187164064900000"
+    },
+    {
+        "nombre": "Bonsái Artificial",
+        "descripción": "Planta de mentira ideal para decoraciones",
+        "precio": "189000",
+        "imagen": "https://tugocolombia.vtexassets.com/arquivos/ids/313528/8893283-1.jpg?v=638815568270570000"
+    },
+    {
+        "nombre": "Chasis Gamer",
+        "descripción": "Chasis Gamer color blanco",
+        "precio": "189000",
+        "imagen": "https://luegopago.blob.core.windows.net/content-process/products-images/prod/1302/8167b795-8914-4dd7-9593-6bba1f1ff837.webp"
+    }
+]
