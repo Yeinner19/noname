@@ -13,7 +13,7 @@
 <body>
     <div class="container col-10 col-lg-4 border border-danger p-5 rounded-3 bg-danger-subtle mt-5">
         <h2 class="text-center">Crear nuevo producto</h2>
-        <form>
+        <form id="form-crear-producto">
             <div class="mb-3">
                 <label for="" class="form-label">Nombre del Producto</label>
                 <input type="text" class="form-control" id="nombre">
@@ -24,16 +24,27 @@
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Precio del Producto</label>
-                <input type="text" class="form-control" id="descripcion">
+                <input type="text" class="form-control" id="precio">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Imagen del Producto</label>
                 <input type="text" class="form-control" id="imagen">
             </div>
-
-            <button type="submit" class="btn btn-primary">Añadir Producto</button>
+            <button type="submit" class="btn btn-success w-100">Añadir Producto</button>
         </form>
     </div>
+
+    <div id="mensaje" class="mt-3"></div>
+
+    <div id="vista-previa" class="row row-cols-2 row-cols-md-2 row-cols-lg-4 g-4">
+
+    </div>
+
+
+
+    <script src="/frontend/js/crear.js"></script>
+
+
 </body>
 
 </html>
