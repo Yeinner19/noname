@@ -1,14 +1,9 @@
 document.addEventListener("DOMContentLoaded",()=>{
-    fetch("../productos/productos.json")
-    .then(res => res.json())
-    .then(data =>{
-        mostrarProductos(data)
-    })
-    .catch(error => console.log("Error al cargar productos", error));
-});
 
-function mostrarProductos(productos){
     const contenedor = document.getElementById("contenedor-productos");
+    
+    const productos = JSON.parse(localStorage.getItem("productos")) || [];
+
     contenedor.innerHTML = "";  
 
     productos.forEach(producto => {
@@ -26,4 +21,4 @@ function mostrarProductos(productos){
         </div>
         `
     });
-}
+});

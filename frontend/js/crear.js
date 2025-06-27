@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         e.preventDefault(); //Esto sirve para que la página no se recargue cuando se oprima el botón de submit
 
         const producto = {
+            id: Date.now(),
             nombre: document.getElementById("nombre").value.trim(),
             descripcion: document.getElementById("descripcion").value.trim(),
             precio: parseFloat(document.getElementById("precio").value),
@@ -21,6 +22,13 @@ document.addEventListener("DOMContentLoaded",()=>{
             mensaje.innerHTML = `<div class="alert alert-danger">Por favor completa todos los campos correctamente </div>`;
             return;
         }
+
+
+        const productosGuardados = JSON.parse(localStorage.getItem("productos")) || [];
+
+        productosGuardados.push(producto);
+
+        localStorage.setItem("productos", JSON.stringify(productosGuardados));
         
         mensaje.innerHTML = `<div class="alert alert-success"> Producto creado correctamente-</div>`;
 
