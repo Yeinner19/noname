@@ -28,11 +28,13 @@ function verTodos() {
 //Función para Ver un sólo producto
 function verUno(id){
     return new Promise ((resolve, reject)=>{
-        const query = "SELECT * FROM products WHERE id = ?";
-
+        const query = "SELECT * FROM productos WHERE id = ?";
         db.query(query, [id], (error, resultado)=>{
-            if (error) return reject(error);
-            resolve(resultado[0])
+            if (error){
+                reject(error);
+            } else {
+                resolve(resultado[0])
+            } 
         });
     });
 }
@@ -43,9 +45,12 @@ const editarProducto = (data) =>{
         const query = "UPDATE productos SET nombre = ?, descripcion = ?, precio = ?, imagen = ?";
         const valores = [data.nombre, data.descripcion, data.precio, data.imagen]
 
-        db.query(query, data, (error, result)=>{
-            if (error) return(reject);
-            resolve(result)
+        db.query(query, valores, (error, result)=>{
+            if (error) {;
+                reject(error)
+            } else {
+                resolve(result);
+            }
         })
     });
 };
@@ -56,8 +61,11 @@ const eliminarProducto = (id) =>{
         const query = "DELETE FROM productos WHERE id = ?"
 
         db.query(query, [id], (error, result)=>{
-            if (error) return(reject);
+            if (error) {
+                reject(error);
+            } else{
             resolve(result);
+            }
         });
     });
 }

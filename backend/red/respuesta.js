@@ -8,7 +8,7 @@ function exito(req, res, data = "", status = 200) {
   res.status(status).json({
     success: true,
     message: typeof data === "string" ? data : undefined,
-    data: typeof data === "object" ? data : undefined
+    data: typeof data === "object" ? data : undefined,
   });
 }
 
@@ -16,11 +16,11 @@ function exito(req, res, data = "", status = 200) {
 function error(req, res, mensaje = "Error inesperado", status = 500) {
   res.status(status).json({
     success: false,
-    error: mensaje
+    error: mensaje,
   });
 }
 
 module.exports = {
   exito,
-  error
+  error,
 };

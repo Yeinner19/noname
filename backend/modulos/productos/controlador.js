@@ -4,7 +4,7 @@ const { exito, error } = require("../../red/respuesta");
 
 const crearProductos = (request, response, next) =>{
     const data = request.body;
-    if(!data.nombre || !data.descripcion || !data.precio || data.imagen){
+    if(!data.nombre || !data.descripcion || !data.precio || !data.imagen){
         return error(request, response, "Faltan campos obligatorios", 400);
     }
     consultas.crearProducto(data)
@@ -35,6 +35,8 @@ const verUno = (request, response, next) =>{
 const editarProducto = (request, response, next) =>{
     const data = request.body;
 
+    console.log("📦 Body recibido:", data)
+
     if (!data.id){
         return error(request, response, "Falta el ID del producto", 400)
     }
@@ -48,7 +50,7 @@ const eliminarProducto = (request, response, next) =>{
     const id = request.params.id;
 
     consultas.eliminarProducto(id)
-    .then(() => exito(request, response, "Producto eliminado", 200))
+    .then(() => exito(request, response, "Has eliminado el producto correctamente🆑", 200))
     .catch (err => next(err));
 }
 
