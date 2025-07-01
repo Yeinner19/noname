@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded",()=>{
     
     const formulario = document.getElementById("form-crear-producto"); //Se obtiene el formulario desde el html por su ID
-
     const mensaje = document.getElementById("mensaje"); //Se obtiene un mensaje que mostrará "éxito" o "error" desde el html por su ID
-
     const vistaPrevia = document.getElementById("vista-previa");
 
     
