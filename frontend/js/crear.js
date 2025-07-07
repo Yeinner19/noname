@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-    const formulario = document.getElementsById("form-crear-producto");
+    const formulario = document.getElementById("form-crear-producto");
     const mensaje = document.getElementById("mensaje");
     const vistaPrevia = document.getElementById("vista-previa");
 
@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         //Enviar al backend (API REST con node.js + mysql)
         
-        fetch("http:/localhost:3000/api/producto/crear",{
+        fetch("http://localhost:3000/api/productos/crear",{
             method: "POST",
             headers: {
-                "Content-Type":"application/json    "
+                "Content-Type":"application/json"
             },
             body:JSON.stringify(producto) //convierte el objeto JS a JSON
         })
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 mensaje.innerHTML = `<div class="alert alert-success">✅ Producto creado correctamente.</div>`;
                 formulario.reset();
 
-                vistaPrevia += `<div class="col">
+                vistaPrevia.innerHTML += `<div class="col">
                         <div class="card h-100 shadow-sm">
                             <img src="${producto.imagen}" class="card-img-top" alt="Producto">
                             <div class="card-body d-flex flex-column">
