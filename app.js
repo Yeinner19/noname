@@ -12,6 +12,7 @@ require("./backend/config/db"); // Esto ejecuta db.connect una sola vez
 
 // Importar rutas de módulos
 const productos = require("./backend/modulos/productos/rutas");
+const usuarios = require("./backend/modulos/usuarios/rutas");
 
 // Middleware globales
 app.use(cors());
@@ -21,6 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Usar las rutas del módulo productos
     app.use("/api/productos", productos);
+    app.use("/api/usuarios", usuarios)
 
 // Middleware para manejo de errores
 const errorHandler = require("./backend/red/errors");
