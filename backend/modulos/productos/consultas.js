@@ -42,12 +42,12 @@ function verUno(id){
 //Función para Editar producto
 const editarProducto = (data) =>{
     return new Promise ((resolve, reject)=>{
-        const query = "UPDATE productos SET nombre = ?, descripcion = ?, precio = ?, imagen = ?";
-        const valores = [data.nombre, data.descripcion, data.precio, data.imagen]
+        const query = "UPDATE productos SET nombre = ?, descripcion = ?, precio = ?, imagen = ? WHERE id = ?";
+        const valores = [data.nombre, data.descripcion, data.precio, data.imagen, data.id];
 
         db.query(query, valores, (error, result)=>{
-            if (error) {;
-                reject(error)
+            if (error) {
+                reject(error);
             } else {
                 resolve(result);
             }
