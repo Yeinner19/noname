@@ -24,6 +24,25 @@ const registrarUsuario = (data) =>{
     });
 };
 
+const iniciarSesion = (correo) =>{
+    return new Promise((resolve, reject)=>{
+        const query = `SELECT * FROM usuarios WHERE correo = ?`;
+
+        console.log("SQL Query a ejecutar:", query);
+        console.log("Parámetros de la query:", [correo]);
+
+        db.query(query, [correo], (err, results) =>{
+            if(err) {
+                console.error("Error en db.query (iniciarSesion):", err);
+                reject(err);
+            }
+            else if (results.length === 0) resolve(null);
+            else resolve(results[0]);
+        });
+    });
+};
+
 module.exports = {
-    registrarUsuario
+    registrarUsuario,
+    iniciarSesion
 }

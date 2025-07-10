@@ -15,7 +15,7 @@ body{
     line-height: initial;
 }
 
-#nombre::placeholder, #correo::placeholder, #contraseña::placeholder  {
+#correo::placeholder, #contraseña::placeholder  {
   color: gray !important; /* Prueba con !important para ver si sobrescribe */
 } 
 

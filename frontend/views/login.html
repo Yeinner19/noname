@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link href="../css/registro.css" rel="stylesheet">
-    <title>Registro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/730a6477fb.js" crossorigin="anonymous"></script>
+    <title>Inicio de Sesión</title>
 </head>
 
 <body class="bg-dark">
-    <section> <!--formulario de registro-->
+    <section> <!--Formulario de Inicio de Sesión-->
         <div class="row g-0">
             <div class="col-lg-7 d-none d-lg-block">
                 <div id="carouselExampleIndicators" class="carousel slide">
@@ -48,14 +51,9 @@
                 <div class="px-lg-5 pt-lg-4 pb-lg-3 p-4 w-100 mb-auto">
                     <img id="logo-principal" src="../img/logo-principal.png" class="img-fluid">
                 </div>
-                <div class="px-lg-5 py-lg-5 p-4 w-100 align-self-center">
-                    <h1 class="fw-bold mb-3">Registrarse</h1>
-                    <form class="mb-4" id="form-registro">
-                        <div class="mb-4">
-                            <label for="exampleInputEmail1" class="form-label fw-bold">Nombre de Usuario</label>
-                            <input placeholder="Ingresa tu nombre de usuario" type="text" class="form-control bg-dark-x border-0 text-white"
-                                id="nombre" aria-describedby="emailHelp">
-                        </div>
+                <div class="px-lg-5 py-lg-4 p-4 w-100 align-self-center">
+                    <h1 class="fw-bold mb-3">Iniciar Sesión</h1>
+                    <form class="mb-4" id="form-login">
                         <div class="mb-4">
                             <label for="exampleInputEmail1" class="form-label fw-bold">Email</label>
                             <input placeholder="ingresa tu email" type="email" class="form-control bg-dark-x border-0 text-white"
@@ -65,8 +63,10 @@
                             <label for="exampleInputPassword1" class="form-label fw-bold">Contraseña</label>
                             <input placeholder="ingresa tu contraseña" type="password"
                                 class="form-control bg-dark-x border-0 mb-2 text-white" id="contraseña">
+                            <a href="" id="recordar" class="form-text text-secondary text-decoration-none">¿Has olvidado
+                                tu contraseña?.</a>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+                        <button type="submit" class="btn btn-primary w-100">Iniciar sesión</button>
                     </form>
                     <p class="fw-bold text-center text-secondary mt-3">o inicia sesión con</p>
                     <div class="d-flex justify-content-around">
@@ -75,6 +75,10 @@
                         <button type="submit" class="btn btn-outline-light flex-grow-1 ms-2"><i
                                 class="fa-brands fa-facebook lead me-2"></i>Facebook</button>
                     </div>
+                </div>
+                <div class="text-center px-lg-5 pt-lg-1 pb-lg-4 p-4 w-100 mt-auto">
+                    <p class="d-inline-block m-0"> ¿Todavía no tienes una cuenta?</p> <a
+                        class="text-light fw-bold text-decoration-none" href="registro.html">Crea una ahora</a>
                 </div>
             </div>
         </div>
@@ -85,7 +89,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
-    <script src="../js/registro.js"></script> <!--AQUI TENIA MAL REFERENCIADA LA RUTA-->
+    <script src="../js/login.js"></script>
 </body>
 
 </html>
