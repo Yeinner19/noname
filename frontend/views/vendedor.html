@@ -5,44 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/barra_nav.css">
     <link rel="stylesheet" href="../css/vendedor.css">
     <title>Vendedor</title>
 </head>
-<body>
-    <div class="row"> <!--Barra de Navegación-->
-            <div class="col">
-                <header>
-                    <nav class="d-flex justify-content-between align-items-center">
-                        <img class="logoPrincipal" src="../img/logo-principal.png" alt="logoNoname">
-                        <ul class="nav nav-underline">
-                            <li class="nav-item">
-                                <a class="nav-link inicio" aria-current="page" href="#">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../views/crear.html">Crear Productos</a>
-                            </li>
-                        </ul>
-                        <ul class="nav nav-underline ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="editar.html">Editar Productos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Ingresa</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Mis compras</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">🛒</a>
-                            </li>
-                            <li class="nav-item me-5">
-                                <a class="nav-link" href="../views/registro.html">Registro</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </header>
+<body style="background-color: rgb(238, 41, 51);">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand me-auto" href="pagina-principal.html">Tienda Digital</a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul id="nav-list" class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-auto">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 active fw-bold" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="crear.html">Vender</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#">Categorias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#">ddd</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+            <a href="" class="login-button">Login</a>
+            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
-    <h1>VENDEDOR</h1>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row">
+            <h1 class="text-center mb-4 mt-5">VENDEDOR</h1>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 </body>
 </html>

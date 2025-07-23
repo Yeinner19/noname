@@ -1,0 +1,73 @@
+/*nuevo navbar desde aquí*/
+.navbar{
+    
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+
+.navbar-brand{
+    font-weight: 500;
+    color:#161B2F !important;
+    font-size: 24px;
+    transition: 0.3s color ;
+    font-weight: bold;
+}
+
+.login-button{
+    background-color: #161B2F;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    font-weight: bold;
+}
+
+
+.login-button:hover{
+    background-color: #b5182d;
+}
+
+.navbar-toggler{
+    border: none !important;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus{
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.nav-link{
+    color: #666777 !important;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active{
+    color: #000 !important;
+}
+
+
+
+@media (min-width: 991px){
+.nav-link::before{
+    content: "";
+    position: absolute ;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #a72519;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover::before, .nav-link.active::before{
+    width: 100%;
+    visibility: visible;
+}
+}   
