@@ -28,12 +28,12 @@ document.addEventListener("DOMContentLoaded",()=>{
                 mensaje.innerHTML = `<div class="alert alert-success">Bienvenido ${usuario.nombre}</div>`
 
                 setTimeout(()=>{
-                    if(usuario.rol === "admin"){
-                        window.location.href = "admin.html";
+                    if(usuario.rol === "administrador"){
+                        window.location.href = "admin.html";x   
                     } else if (usuario.rol === "vendedor"){
                         window.location.href = "vendedor.html"
                     }else {
-                        window.location.href = "pagina-principal.html"
+                        window.location.href = "../index.html"
                     }
                 }, 1500)
             } else{
