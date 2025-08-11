@@ -47,33 +47,37 @@ document.addEventListener("DOMContentLoaded", () => {
             boton.addEventListener("click", (e) => {
                 e.preventDefault();
                 const id = boton.getAttribute("data-id");
-                window.location.href = `editar.html?id=${id}`;
+                window.location.href = `/noname/frontend/views/editar.html?id=${id}`;
             });
         });
     }
     function asignarEventosEliminar() {
-        const botonesEliminar = document.querySelectorAll(".btn-eliminar");
-        botonesEliminar.forEach(boton => {
-            boton.addEventListener("click", (e) => {
-                e.preventDefault();
-                const id = boton.getAttribute("data-id");
-
-                fetch(`http://localhost:3000/api/productos/eliminar/${id}`, {
-                    method: "DELETE"
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        if (data.success) {
-                            alert("Producto eliminado correctamente");
-                            location.reload();
-                        } else {
-                            alert("Error al eliminar producto");
-                        }
-                    })
-                    .catch(err => {
-                        console.error("Error al eliminar producto:", err);
-                    });
-            }); 
-        });
-    }
+    const botonesEliminar = document.querySelectorAll(".btn-eliminar");
+    botonesEliminar.forEach(boton => {
+        boton.addEventListener("click", (e) => {
+            e.preventDefault();
+            const id = boton.getAttribute("data-id");
+            const tarjetaAEliminar = boton.closest(".col");
+            
+            fetch(`http://localhost:3000/api/productos/eliminar/${id}`, {
+                method: "DELETE"
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) { // ✅ Lógica correcta: Si es exitoso...
+                    alert("Producto eliminado correctamente");
+                    if (tarjetaAEliminar) {
+                        tarjetaAEliminar.remove(); // ...se remueve la tarjeta
+                    }
+                } else { // ❌ Lógica correcta: Si no es exitoso...
+                    alert("Error al eliminar producto: " + data.error); // ...solo se muestra un error
+                }
+            })
+            .catch(err => {
+                console.error("Error al eliminar producto:", err);
+                alert("Ocurrió un error de conexión al intentar eliminar el producto.");
+            });
+        }); 
+    });
+}
 });

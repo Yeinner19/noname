@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded",()=>{
                     } else if (usuario.rol === "vendedor"){
                         window.location.href = "vendedor.html"
                     }else {
-                        window.location.href = "../index.html"
+                        window.location.href = "/noname/index.html"
                     }
                 }, 1500)
             } else{

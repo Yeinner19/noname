@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     mensaje.innerHTML = `<div class="alert alert-success">✅ Producto actualizado correctamente.</div>`;
                 }
                 setTimeout(() => {
-                    window.location.href = "index.html";
+                    window.location.href = "/noname/index.html";
                 }, 2000);
             } else {
                 if (mensaje) {
