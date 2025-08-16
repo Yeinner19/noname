@@ -1,3 +1,14 @@
+html, body {
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 .hero-section{
     background: url(../img/principal-page.jpg) no-repeat center;

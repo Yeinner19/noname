@@ -1,5 +1,10 @@
-.row{
-    background-color: #f2f2f2;
+.preview {
+  margin-top: 20px;
 }
-/* Estilos CSS añadidos aquí para no tocar el navbar ni sus CSS externos */
 
+#previewImage {
+  max-width: 300px;
+  max-height: 300px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}

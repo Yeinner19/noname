@@ -56,3 +56,44 @@ document.addEventListener("DOMContentLoaded", ()=>{
         });
     });
 });
+
+(function () {
+  // Garantiza que corra tanto si el script carga antes o después del DOM
+  const start = () => {
+    const fileInput = document.getElementById("fileInput");
+    const previewImage = document.getElementById("previewImage");
+
+    if (!fileInput || !previewImage) {
+      console.error("No se encontró #fileInput o #previewImage. Revisa los IDs y el HTML.");
+      return;
+    }
+
+    fileInput.addEventListener("change", () => {
+      const file = fileInput.files && fileInput.files[0];
+      if (!file) { previewImage.style.display = "none"; previewImage.removeAttribute("src"); return; }
+
+      // Valida tipo: PNG o JPEG
+      const ok = file.type === "image/png" || file.type === "image/jpeg";
+      if (!ok) {
+        alert("Solo se permiten imágenes PNG o JPEG.");
+        fileInput.value = "";
+        previewImage.style.display = "none";
+        previewImage.removeAttribute("src");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        previewImage.src = e.target.result;
+        previewImage.style.display = "block";
+      };
+      reader.readAsDataURL(file);
+    });
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start);
+  } else {
+    start();
+  }
+})();

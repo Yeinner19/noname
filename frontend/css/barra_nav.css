@@ -2,9 +2,12 @@
 .navbar{
     
     background-color: #fff;
-    margin: 20px;
+    padding: 10px;
 
-    padding: 0.5rem;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 0px;
 }
 
 .navbar-brand{
@@ -13,8 +16,10 @@
     font-size: 24px;
     transition: 0.3s color ;
     font-weight: bold;
-}
 
+
+
+}
 .login-button{
     background-color: #161B2F;
     color: #fff;
