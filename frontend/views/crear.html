@@ -19,7 +19,7 @@
 
   <script>
 
-    fetch('/noname-main/noname-main/frontend/views/barra_nav.html')
+    fetch('./barra_nav.html')
       .then(response => response.text())
       .then(html => {
         document.getElementById('barra_nav-Container').innerHTML = html;
