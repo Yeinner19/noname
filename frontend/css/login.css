@@ -1,0 +1,46 @@
+:root{
+    --dark: #16191C;
+    --dark-x: #1e2126;
+    --light: #ffffff
+}
+
+body{
+    color: var(--light) !important;
+    font-size:small;
+}
+
+.bg-dark-x{background-color: var(--dark-x) !important;}
+.form-control, .btn{
+    min-height: 2.8rem;
+    line-height: initial;
+}
+
+#correo::placeholder, #contraseña::placeholder  {
+  color: gray !important; /* Prueba con !important para ver si sobrescribe */
+} 
+
+#logo-principal{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+
+.img-1{
+    background-image: url(../img/prueba.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img-2{
+    background-image: url(../img/laptopmoderna.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img-3{
+    background-image: url(../img/unnamed.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-fade .carousel-item {
+  transition: opacity 0.5s ease-in-out;
+}

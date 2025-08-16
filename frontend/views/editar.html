@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editar</title>
+    <link rel="stylesheet" href="../css/editar.css">
+    <link rel="stylesheet" href="../css/barra_nav.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row"> <!--Barra de Navegación-->
+            <div class="col">
+                <header>
+                    <nav class="d-flex justify-content-between align-items-center">
+                        <img class="logoPrincipal" src="../img/logo-principal.png" alt="logoNoname">
+                        <ul class="nav nav-underline">
+                            <li class="nav-item">
+                                <a class="nav-link inicio" aria-current="page"
+                                    href="../views/pagina-principal.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../views/crear.html">Crear Productos</a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-underline ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Crea tu cuenta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Ingresa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Mis compras</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">🛒</a>
+                            </li>
+                            <li class="nav-item me-5">
+                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+        </div>
+    </div>
+
+    <div class="container col-10 col-lg-4 border border-danger p-5 rounded-3 bg-danger-subtle mt-2">
+        <h2 class="text-center">Editar Producto</h2>
+        <form id="form-editar-producto">
+            <div class="mb-3">
+                <label for="" class="form-label">Id del Producto</label>
+                <input type="hidden" class="form-control" id="id">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre del Producto</label>
+                <input type="text" class="form-control" id="nombre">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Descripción del Producto</label>
+                <textarea type="text" class="form-control" id="descripcion"> </textarea>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Precio del Producto</label>
+                <input type="text" class="form-control" id="precio">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Imagen del Producto</label>
+                <input type="text" class="form-control" id="imagen">
+            </div>
+            <button type="submit" class="btn btn-success w-100">Editar Producto</button>
+        </form>
+    </div>
+
+    <div id="mensaje" class="mt-3"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"></script>
+
+        <script src="../js/editar.js"></script>
+</body>
+</html>
