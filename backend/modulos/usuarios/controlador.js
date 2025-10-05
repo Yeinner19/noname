@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 const registrar = (req, res, next) => {
     const data = req.body;
 
-    if (!data.nombre || !data.correo || !data.contraseña){
+    if (!data.nombre || !data.correo || !data.contrasena){
         return error(req, res, "Todos los campos son obligatorios", 400)
     }
     consultas.registrarUsuario(data)
@@ -21,10 +21,10 @@ const registrar = (req, res, next) => {
 
 
 const iniciarSesion = (req, res, next) =>{
-    const { correo, contraseña } = req.body;
+    const { correo, contrasena } = req.body;
 
-    if(!correo || !contraseña){
-        return error(req, res, "El correo y la contraseña son obligatorios", 400)
+    if(!correo || !contrasena){
+        return error(req, res, "El correo y la contrasena son obligatorios", 400)
     }
     consultas.iniciarSesion(correo)
         .then(usuario =>{
@@ -33,9 +33,9 @@ const iniciarSesion = (req, res, next) =>{
                 return error(req, res, "Usuario no encontrado", 404)
             }
 
-            bcrypt.compare(contraseña, usuario.contraseña, (err, coinciden)=>{
+            bcrypt.compare(contrasena, usuario.contrasena, (err, coinciden)=>{
                 if (err || !coinciden){
-                    return error (req, res, "contraseña incorrecta", 401);
+                    return error (req, res, "contrasena incorrecta", 401);
                 }
 
                 exito(req, res, {
