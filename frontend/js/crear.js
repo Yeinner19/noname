@@ -9,14 +9,18 @@ document.addEventListener("DOMContentLoaded", ()=>{
         const producto = {
             nombre: document.getElementById("nombre").value.trim(),
             descripcion: document.getElementById("descripcion").value.trim(),
-            precio: parseFloat(document.getElementById("precio").value),
-            imagen: document.getElementById("imagen").value.trim()
+            precio: Number(document.getElementById("precio").value) || 0,
+            imagen: document.getElementById("imagen").value.trim(),
+            stock: Number(document.getElementById("stock").value),
+            estado: document.getElementById("estado").value.trim().toLowerCase()
         };
 
-        if( !producto.nombre || !producto.descripcion || isNaN(producto.precio)  || !producto.imagen){
+        if( !producto.nombre || !producto.descripcion || isNaN(producto.precio)  || !producto.imagen || isNaN(producto.stock) || !producto.estado){
             mensaje.innerHTML = `<div class="alert alert-danger">❌ Por favor completa todos los campos correctamente</div>`;
             return;
         }
+
+        console.log("Producto que se enviará:", producto);
 
         //Enviar al backend (API REST con node.js + mysql)
         

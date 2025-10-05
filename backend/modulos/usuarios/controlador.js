@@ -47,7 +47,7 @@ const iniciarSesion = (req, res, next) =>{
                         rol: usuario.rol
                     }
                 }, 200);
-                // 👉 Aquí es donde normalmente se generaría y enviaría un Token JWT para futuras peticiones autenticadas.
+            
             })
         })
         .catch(next);

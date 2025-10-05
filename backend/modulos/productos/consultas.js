@@ -3,8 +3,8 @@ const db = require("../../config/db");
 //esta es la función para crear un nuevo producto en la base de datos
 function crearProducto(data){ //data es el objeto que contiene los datos del producto
     return new Promise ((resolve, reject)=>{
-        const query = "INSERT INTO productos (nombre, descripcion, precio, imagen) VALUES (?, ?, ?, ?)";
-        const valores = [data.nombre, data.descripcion, data.precio, data.imagen];
+        const query = "INSERT INTO productos (nombre, descripcion, precio, imagen, stock, estado) VALUES (?, ?, ?, ?, ?, ?)";
+        const valores = [data.nombre, data.descripcion, data.precio, data.imagen, data.stock, data.estado];
 
         db.query(query, valores, (error, result)=> { //Ejecutar la consulta en la base de datos 
             if(error) return reject(error);

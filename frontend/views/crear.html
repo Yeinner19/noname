@@ -12,27 +12,36 @@
     <style>
         /* Estilos CSS añadidos aquí para no tocar el navbar ni sus CSS externos */
 
-        html, body {
-            height: 100%; /* Asegura que html y body ocupen toda la altura de la ventana */
+        html,
+        body {
+            height: 100%;
+            /* Asegura que html y body ocupen toda la altura de la ventana */
             margin: 0;
-            padding: 0; /* Asegura que no haya padding o margen extra */
-            overflow-x: hidden; /* Previene el scroll horizontal */
+            padding: 0;
+            /* Asegura que no haya padding o margen extra */
+            overflow-x: hidden;
+            /* Previene el scroll horizontal */
         }
 
         /* Ajusta este valor (56px) a la altura real de tu navbar */
         /* Puedes inspeccionar tu navbar en el navegador para ver su altura calculada */
         body {
-            padding-top: 56px; /* Deja espacio para el navbar fijo en la parte superior */
+            padding-top: 56px;
+            /* Deja espacio para el navbar fijo en la parte superior */
             /* El background-color del body lo mantienes en la etiqueta <body> como ya lo tienes */
         }
 
         /* Contenedor principal que envuelve el formulario y gestiona el centrado */
         .main-content-wrapper {
-            display: flex; /* Habilita Flexbox para el centrado */
-            justify-content: center; /* Centra horizontalmente el formulario */
-            align-items: center; /* Centra verticalmente el formulario */
+            display: flex;
+            /* Habilita Flexbox para el centrado */
+            justify-content: center;
+            /* Centra horizontalmente el formulario */
+            align-items: center;
+            /* Centra verticalmente el formulario */
             /* La altura mínima es la altura de la ventana (100vh) menos el espacio del navbar */
-            min-height: calc(100vh - 56px); /* Ajusta 56px si el padding-top del body es diferente */
+            min-height: calc(100vh - 56px);
+            /* Ajusta 56px si el padding-top del body es diferente */
         }
     </style>
 </head>
@@ -52,7 +61,8 @@
                 <div class="offcanvas-body">
                     <ul id="nav-list" class="navbar-nav justify-content-center flex-grow-1 pe-3 mt-auto">
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 active fw-bold" aria-current="page" href="../../index.html">Inicio</a>
+                            <a class="nav-link mx-lg-2 active fw-bold" aria-current="page"
+                                href="../../index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-lg-2" href="crear.html">Vender</a>
@@ -97,6 +107,17 @@
                 <div class="mb-3">
                     <label for="imagen" class="form-label">Imagen del Producto</label>
                     <input type="text" class="form-control" id="imagen">
+                </div>
+                <div>
+                    <label for="cantidad" class="form-label">Cantidad</label>
+                    <input type="number" class="form-control" id="stock">
+                </div>
+                <div>
+                    <label for="estado" class="form-label">Estado</label>
+                    <select id="estado">
+                        <option value="disponible">Disponible</option>
+                        <option value="no disponible">No disponible</option>
+                    </select>
                 </div>
                 <button type="submit" class="btn btn-success w-100 mt-3">Añadir Producto</button>
             </form>

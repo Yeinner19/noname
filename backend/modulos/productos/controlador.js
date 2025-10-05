@@ -4,7 +4,8 @@ const { exito, error } = require("../../red/respuesta");
 
 const crearProductos = (request, response, next) =>{
     const data = request.body;
-    if(!data.nombre || !data.descripcion || !data.precio || !data.imagen){
+    console.log("Body recibido:", req.body);
+    if(!data.nombre || !data.descripcion || !data.precio || !data.imagen || !data.stock || !data.estado){
         return error(request, response, "Faltan campos obligatorios", 400);
     }
     consultas.crearProducto(data)
